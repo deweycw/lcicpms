@@ -4,7 +4,7 @@
 '''
 from pandas import DataFrame
 
-from in_out import get_data_from_csv
+from lcicpms.in_out import get_data_from_csv
 
 class RawICPMSData:
 
@@ -29,13 +29,17 @@ class RawICPMSData:
         # dataframe containing raw data 
         self.raw_data_df : DataFrame = None
 
+        self.load_data()
+        self.get_elements_and_time_labels()
+        self.get_intensities()
+        self.get_times()
+
+        
     def load_data(self):
         '''
         Determines data type of raw data file and loads the data. Currently only .csv files are valid. 
         '''
-
-        if self.raw_data_file.split('.')[-1] == '.csv':
-
+        if self.raw_data_file.split('.')[-1] == 'csv':
             self.data_type = 'csv'
             self.raw_data_df = get_data_from_csv(self.raw_data_file)
 
@@ -44,12 +48,11 @@ class RawICPMSData:
         '''
         Gets the elements and time labels from the raw data file.
         '''
-
         if self.data_type == 'csv':
 
             for col in self.raw_data_df.columns:
 
-                if ('Time' not in col) and ('time' not in col):
+                if ('Time' not in col) and ('time' not in col) and ('Number' not in col):
 
                     self.elements.append(col)
                 
@@ -62,13 +65,31 @@ class RawICPMSData:
         Gets np array of intensities of each element in dataframe and stores in dict. 
         '''
 
-        self.intensities = {e: self.raw_data_df[e].to_numpy() () for e in self.elements}
+        self.intensities = {e: self.raw_data_df[e].to_numpy() for e in self.elements}
 
     def get_times(self):
         '''
         Gets np array of times of for each element
         '''
-
         time_labels_dict = {e: [l for l in self.time_labels if e in l][0] for e in self.elements}
         
         self.times = {e: self.raw_data_df[time_labels_dict[e]].to_numpy() for e in self.elements}
+
+    def plot_raw_data(self, elements : list = None):
+        import matplotlib.pyplot as plt
+
+        if elements == None:
+
+            elements = self.elements
+
+        fig, ax = plt.subplots()
+        maxy = 0 
+        for e in elements:
+            ax.plot(self.times[e], self.intensities[e], label=e)
+            if max(self.intensities[e]) > maxy:
+                maxy = max(self.intensities[e])
+                ax.set_ylim(0,maxy*1.01)
+        ax.legend(frameon=False)
+        title = self.raw_data_file.split('/')[-1]
+        fig.suptitle(title)
+        plt.show()

@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "lcicpms"
+version = "0.0.1"
+
+authors = [
+    { name="Christian Dewey", email="cdewey@umn.edu" },
+    { name="Rene Boiteau", email="rboiteau@umn.edu" },
+]
+
+description = "A package for processing LC-ICPMS data"
+readme = "README.md"
+requires-python = ">=3.12"
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "pandas",
+    "numpy",
+]
+
