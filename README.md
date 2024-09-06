@@ -1,4 +1,4 @@
-## High-Level Overview
+# Overview
 
 ### Purpose
 
@@ -42,6 +42,8 @@ The code provides a comprehensive toolkit for processing LC-ICP-MS data, includi
 - **Quantification**: Calculate and report the concentrations of elements in samples.
 
 It integrates various aspects of data handling and analysis into a coherent workflow, facilitating efficient and accurate analysis of LC-ICP-MS data.
+
+---
 
 # Help Documentation
 
