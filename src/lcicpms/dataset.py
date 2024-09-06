@@ -131,15 +131,13 @@ class Dataset:
 
     def quantitate(self,
                    time_range: tuple = (-1, -1),
-                   elements: list = ['Fe', 'Co', 'Mn', 'Ni', 'Cu'],
                    cal_std_concs: list = [0, 10, 25, 50, 100, 200], 
                    cal_keywords_by_conc: list = ['std_0', 'std_1', 'std_2', 'std_3', 'std_4', 'std_5']):
         """
-        Quantify concentrations of specified elements using calibration data and internal standard correction.
+        Quantify concentrations of all elements in raw file using calibration data and internal standard correction.
         
         Args:
             time_range (tuple): Tuple indicating time range for concentration integration (default: (-1, -1)).
-            elements (list): List of elements to quantify (default: ['Fe', 'Co', 'Mn', 'Ni', 'Cu']).
             cal_std_concs (list): List of standard concentrations for calibration (default: [0, 10, 25, 50, 100, 200]).
             cal_keywords_by_conc (list): Keywords to identify calibration files (default: ['std_0', 'std_1', 'std_2', 'std_3', 'std_4', 'std_5']).
         
