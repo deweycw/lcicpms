@@ -43,6 +43,41 @@ The code provides a comprehensive toolkit for processing LC-ICP-MS data, includi
 
 It integrates various aspects of data handling and analysis into a coherent workflow, facilitating efficient and accurate analysis of LC-ICP-MS data.
 
+--- 
+
+## Example Python Script
+
+```python
+from lcicpms.dataset import Dataset
+
+# Initialize Dataset object with the directory paths
+raw_data_dir = 'path/to/raw_data'
+cal_data_dir = 'path/to/calibration_data'
+dataset = Dataset(raw_data_dir=raw_data_dir, cal_data_dir=cal_data_dir)
+
+# Load raw data
+dataset.load_raw_data(dir=raw_data_dir)
+
+# Perform calibration
+dataset.run_calibration(
+    cal_std_concs=[0, 10, 25, 50, 100, 200],
+    cal_keywords_by_conc=['std_0', 'std_1', 'std_2', 'std_3', 'std_4', 'std_5']
+)
+
+# Perform internal standard correction
+istd_base = dataset.internal_std_correction()
+
+# Quantify elements
+dataset.quantitate(
+    time_range=(0, 100),  # Specify your time range
+    elements=['Fe', 'Co', 'Mn', 'Ni', 'Cu'],
+    cal_std_concs=[0, 10, 25, 50, 100, 200],
+    cal_keywords_by_conc=['std_0', 'std_1', 'std_2', 'std_3', 'std_4', 'std_5']
+)
+
+# Print results
+print(dataset.concentrations_df)
+```
 ---
 
 # Documentation
