@@ -45,7 +45,7 @@ It integrates various aspects of data handling and analysis into a coherent work
 
 ---
 
-# Help Documentation
+# Documentation
 
 ## Module: `lcicpms`
 
