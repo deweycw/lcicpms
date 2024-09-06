@@ -64,13 +64,10 @@ dataset.run_calibration(
     cal_keywords_by_conc=['std_0', 'std_1', 'std_2', 'std_3', 'std_4', 'std_5']
 )
 
-# Perform internal standard correction
-istd_base = dataset.internal_std_correction()
 
-# Quantify elements
+# Quantify elements (internal standard correction done automatically)
 dataset.quantitate(
-    time_range=(0, 100),  # Specify your time range
-    elements=['Fe', 'Co', 'Mn', 'Ni', 'Cu'],
+    time_range=(0, 1200),  # Specify your time range (seconds)
     cal_std_concs=[0, 10, 25, 50, 100, 200],
     cal_keywords_by_conc=['std_0', 'std_1', 'std_2', 'std_3', 'std_4', 'std_5']
 )
