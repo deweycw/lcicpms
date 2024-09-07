@@ -10,10 +10,9 @@ Documentation for lcicpms
 
    overview
    installation
-   corems-assignment
-   workflow
-   coremstools
    examples
+   lcicpms
+
    
 
 
