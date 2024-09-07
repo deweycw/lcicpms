@@ -16,4 +16,3 @@ Local editable installation
     git clone https://github.com/deweycw/lcicpms.git lcicpms
     cd lcicpms/src
     python -m pip install -e . 
-```​⬤
