@@ -1,7 +1,7 @@
-Welcome to coremstools's documentation!
-=======================================
+Documentation for lcicpms 
+=========================
 
-.. automodule:: coremstools
+.. automodule:: lcicpms
     :members:
 
 .. toctree::
