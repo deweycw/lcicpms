@@ -5,7 +5,7 @@ Modules
 
    <hr>
 
-.. automodule:: lcicpms.Dataset
+.. automodule:: lcicpms.dataset
    :members:
    
 
@@ -15,7 +15,7 @@ Modules
    <hr>
 
 
-.. automodule:: coremstools.RawICPMSData
+.. automodule:: lcicpms.raw_icpms_data
    :members:
    
 .. raw:: html
@@ -23,7 +23,7 @@ Modules
    <hr>
 
 
-.. automodule:: coremstools.Quantitate
+.. automodule:: lcicpms.quantitate
    :members:
    
 .. raw:: html
@@ -31,7 +31,7 @@ Modules
    <hr>
 
 
-.. automodule:: coremstools.Calibrate
+.. automodule:: lcicpms.calibration
    :members:
    
 .. raw:: html
@@ -39,7 +39,7 @@ Modules
    <hr>
 
 
-.. automodule:: coremstools.integrate
+.. automodule:: lcicpms.integrate
    :members:
    
 .. raw:: html
@@ -47,7 +47,7 @@ Modules
    <hr>
 
 
-.. automodule:: coremstools.utils
+.. automodule:: lcicpms.utils
    :members:
    
 .. raw:: html
@@ -55,7 +55,7 @@ Modules
    <hr>
 
 
-.. automodule:: coremstools.in_out
+.. automodule:: lcicpms.in_out
    :members:
 
 
