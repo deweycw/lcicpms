@@ -1,4 +1,18 @@
-# Overview
+## Installation
+
+### Installation
+
+#### Install from pypi
+    python -m pip install lcicpms
+
+#### Local editable installation
+    git clone https://github.com/deweycw/lcicpms.git lcicpms
+    cd lcicpms/src
+    python -m pip install -e . 
+
+--
+
+## Overview
 
 ### Purpose
 

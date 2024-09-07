@@ -1,13 +1,11 @@
+LICENSE
 README.md
 pyproject.toml
 src/lcicpms/__init__.py
 src/lcicpms/calibration.py
-src/lcicpms/chroma_feature.py
-src/lcicpms/chromatogram.py
 src/lcicpms/dataset.py
 src/lcicpms/in_out.py
 src/lcicpms/integrate.py
-src/lcicpms/internal_std_normalization.py
 src/lcicpms/quantitate.py
 src/lcicpms/raw_icpms_data.py
 src/lcicpms/utils.py
