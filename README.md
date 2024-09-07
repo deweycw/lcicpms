@@ -115,11 +115,6 @@ Handles raw LC-ICP-MS data, loading from files, and extracting relevant informat
 
 ### Methods
 
-- **`__init__(self, raw_data_file: str = None)`**
-  - **Description**: Initializes the `RawICPMSData` object and loads data from the specified file.
-  - **Args**:
-    - `raw_data_file (str)`: Path to the raw ICP-MS data file.
-
 - **`load_data(self)`**
   - **Description**: Determines the data type of the raw data file and loads the data. Currently supports only `.csv` files.
 
@@ -154,9 +149,6 @@ Provides functionality to integrate signal traces to calculate the area under th
     - `time_range (tuple)`: Tuple specifying the start and end times for integration. If `None`, integrates over the entire range.
   - **Returns**: 
     - `float`: Calculated peak area under the curve.
-
-- **`other()`**
-  - **Description**: Placeholder method for additional processing (currently commented out).
 
 ---
 
