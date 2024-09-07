@@ -32,4 +32,4 @@ language = 'Python'
 html_theme = 'sphinx_rtd_theme'
 
 
-autodoc_mock_imports = [ "numpy", "scipy", "pandas", "tqdm", "matplotlib.pyplot", "matplotlib","seaborn"]
+autodoc_mock_imports = ["sklearn", "numpy", "scipy", "pandas", "tqdm", "matplotlib.pyplot", "matplotlib","seaborn"]
