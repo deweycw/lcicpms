@@ -16,6 +16,16 @@
 
 The code is designed for handling and analyzing LC-ICP-MS (Liquid Chromatography-Inductively Coupled Plasma Mass Spectrometry) data. It includes functionality for loading raw data, performing calibration, applying internal standard corrections, and quantifying element concentrations.
 
+### Summary
+
+The code provides a comprehensive toolkit for processing LC-ICP-MS data, including:
+- **Data Import**: Load and process raw data files.
+- **Calibration**: Set up and apply calibration curves based on known standards.
+- **Correction**: Apply internal standard corrections to improve accuracy.
+- **Quantification**: Calculate and report the concentrations of elements in samples.
+
+It integrates various aspects of data handling and analysis into a coherent workflow, facilitating efficient and accurate analysis of LC-ICP-MS data.
+
 ### Key Components
 
 1. **Data Handling and Loading**
@@ -44,16 +54,6 @@ The code is designed for handling and analyzing LC-ICP-MS (Liquid Chromatography
      - **Quantification**:
        - Quantifies concentrations of specific elements using calibration data and internal standard corrections.
        - Integrates data over specified time ranges and produces a DataFrame of quantified concentrations.
-
-### Summary
-
-The code provides a comprehensive toolkit for processing LC-ICP-MS data, including:
-- **Data Import**: Load and process raw data files.
-- **Calibration**: Set up and apply calibration curves based on known standards.
-- **Correction**: Apply internal standard corrections to improve accuracy.
-- **Quantification**: Calculate and report the concentrations of elements in samples.
-
-It integrates various aspects of data handling and analysis into a coherent workflow, facilitating efficient and accurate analysis of LC-ICP-MS data.
 
 --- 
 
@@ -171,18 +171,10 @@ Manages raw LC-ICP-MS data, performs calibration, applies internal standard corr
 - **`skip_keywords (list)`**: List of keywords to exclude certain files.
 - **`raw_data_dict (dict)`**: Dictionary of loaded raw data files.
 - **`cal_icpms_obj_dict (dict)`**: Dictionary of calibration files for each concentration.
-- **`_cal_has_run (bool)`**: Flag indicating whether calibration has been performed.
 - **`cal (Calibration)`**: Calibration object with standard concentrations and elements.
 - **`concentrations_df (DataFrame)`**: DataFrame of quantified concentrations.
 
 ### Methods
-
-- **`__init__(self, raw_data_dir: str = None, cal_data_dir: str = None, skip_keywords: list = ['results'])`**
-  - **Description**: Initializes the `Dataset` object with directories for raw and calibration data.
-  - **Args**:
-    - `raw_data_dir (str)`: Directory for raw data files.
-    - `cal_data_dir (str)`: Directory for calibration files.
-    - `skip_keywords (list)`: Keywords to filter out certain files (default: `['results']`).
 
 - **`load_raw_data(self, dir: str)`**
   - **Description**: Loads raw ICP-MS data files from the specified directory.
